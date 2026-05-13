@@ -6,7 +6,7 @@ import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Support from "./pages/support";
-import CustomCursor from "./components/CustomCursor";
+import CustomCursor from "./components/Customcursor";
 import "./App.css";
 import Footer from "./components/Footer";
 
