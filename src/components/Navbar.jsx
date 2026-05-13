@@ -1,218 +1,167 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Globe, Building2, BadgeCheck } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Globe,
+  Building2,
+  BadgeCheck,
+  ChevronDown,
+  Search,
+} from "lucide-react";
+
+import logo from "../assets/logo/hexa-logo.png";
 
 export default function Navbar() {
-    return (
-        <>
-            {/* Top Header */}
-            {/* <div className="w-full border-b border-white/10 bg-[#0A1733] text-white">
-                <div className="mx-auto flex max-w-[1700px] items-center justify-between px-6 py-2">
+  return (
+    <header className="w-full border-b border-gray-200 bg-white" style={{ position: "sticky", top: 0, zIndex: 100 }}>
+      {/* TOP BAR */}
+      <div className="border-b border-gray-200 bg-[#f8f8f8]">
+        <div className="max-w-[1664px] mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between py-2 gap-3 text-sm text-gray-700">
 
-                  
-                    <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
+            {/* LEFT */}
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Globe size={16} />
+                <span>Import Export Licensed</span>
+              </div>
 
-                        <div className="flex items-center gap-2">
-                            <span className="text-orange-500">•</span>
-                            <BadgeCheck size={14} className="text-green-400" />
-                            <span>GST Verified</span>
-                        </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
 
-                        <div className="flex items-center gap-2">
-                            <span className="text-orange-500">•</span>
-                            <Globe size={14} className="text-cyan-400" />
-                            <span>50+ Countries Served</span>
-                        </div>
+              <div className="flex items-center gap-2">
+                <Building2 size={16} />
+                <span>MSME Registered</span>
+              </div>
 
-                        <div className="flex items-center gap-2">
-                            <span className="text-orange-500">•</span>
-                            <Building2 size={14} className="text-gray-300" />
-                            <span>Import Export Licensed</span>
-                        </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
 
-                        <div className="flex items-center gap-2">
-                            <span className="text-orange-500">•</span>
-                            <BadgeCheck size={14} className="text-green-400" />
-                            <span>MSME Registered</span>
-                        </div>
+              <div className="flex items-center gap-2">
+                <BadgeCheck size={16} />
+                <span>GST Verified</span>
+              </div>
+            </div>
 
-                    </div>
+            {/* RIGHT */}
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="tel:+919876543210"
+                className="flex items-center gap-2 hover:text-blue-700 transition"
+              >
+                <Phone size={16} />
+                <span>+91 98765 43210</span>
+              </a>
 
-                
-                    <div className="hidden lg:flex items-center gap-6 text-sm">
+              <a
+                href="mailto:info@hexaurainternational.com"
+                className="flex items-center gap-2 hover:text-blue-700 transition"
+              >
+                <Mail size={16} />
+                <span>info@hexaurainternational.com</span>
+              </a>
 
-                        <div className="flex items-center gap-2">
-                            <Phone size={15} />
-                            <span>+91 99999 99999</span>
-                        </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <div className="flex items-center gap-2">
-                            <Mail size={15} />
-                            <span>info@hexauraintl.com</span>
-                        </div>
+      {/* MAIN NAVBAR */}
+      <div className="bg-white">
+        <div className="max-w-[1664px] mx-auto px-4">
+          <div className="flex items-center justify-between py-4">
 
-                        <div className="flex items-center gap-3">
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20">
-                                in
-                            </div>
+            {/* LOGO */}
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="Hexaura International Logo"
+                className="w-18"
+              />
 
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20">
-                                tw
-                            </div>
+              <div>
+                <h1 className="text-[20px] font-bold leading-none text-[#0d1b3d]">
+                  HEXAURA
+                </h1>
 
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20">
-                                ig
-                            </div>
-                        </div>
+                <h2 className="text-[20px] font-bold leading-none text-[#0d1b3d]">
+                  INTERNATIONAL
+                </h2>
 
-                    </div>
+                <p className="text-[14px] text-gray-500 mt-1">
+                  Sourcing | Trading | Import Export
+                </p>
+              </div>
+            </Link>
 
+            {/* MENU */}
+            <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+              <Link
+                to="/"
+                className="relative text-[#0d1b3d] font-semibold after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#0d1b3d]"
+              >
+                Home
+              </Link>
+
+              <div className="group relative cursor-pointer">
+                <div className="flex items-center gap-1 hover:text-[#0d1b3d]">
+                  Buy Products
+                  <ChevronDown size={16} />
                 </div>
-            </div> */}
+              </div>
 
-            {/* Main Navbar */}
-            <header className="fixed left-0 z-50 w-full px-5 pt-5">
-
-                <div className="
-    mx-auto
-    flex
-    max-w-[1800px]
-    items-center
-    justify-between
-    rounded-3xl
-    border
-    border-white/10
-    bg-white/5
-    px-10
-    py-5
-    backdrop-blur-xl
-    shadow-[0_8px_32px_rgba(0,0,0,0.25)]
-    relative
-    overflow-hidden
-  ">
-
-                    {/* Glass Gradient Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/[0.02] to-white/5"></div>
-
-                    {/* Inner Border Glow */}
-                    <div className="absolute inset-[1px] rounded-3xl border border-white/5"></div>
-
-                    {/* Logo */}
-                    <Link
-                        to="/"
-                        className="relative z-10 flex items-center gap-4"
-                    >
-
-                        <div className="
-        flex
-        h-16
-        w-16
-        items-center
-        justify-center
-        rounded-2xl
-        bg-gradient-to-br
-        from-orange-400
-        to-orange-600
-        text-4xl
-        font-bold
-        text-white
-        shadow-[0_10px_30px_rgba(255,115,0,0.4)]
-      ">
-                            H
-                        </div>
-
-                        <div>
-                            <h1 className="text-4xl font-bold leading-none">
-                                <span className="text-blue-400">Hex</span>
-                                <span className="text-orange-400">aura</span>
-                            </h1>
-
-                            <p className="text-lg tracking-wide text-white/70">
-                                International
-                            </p>
-                        </div>
-
-                    </Link>
-
-                    {/* Nav Links */}
-                    <nav className="relative z-10 hidden xl:flex items-center gap-14">
-
-                        <Link
-                            to="/"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Home
-                        </Link>
-
-                        <Link
-                            to="/buy-products"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Buy Products
-                        </Link>
-
-                        <Link
-                            to="/sell-products"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Sell Products
-                        </Link>
-
-                        <Link
-                            to="/product-sourcing"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Product Sourcing
-                        </Link>
-
-                        <Link
-                            to="/enquiry"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Enquiry
-                        </Link>
-
-                        <Link
-                            to="/about"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            About Us
-                        </Link>
-
-                        <Link
-                            to="/contact"
-                            className="text-lg font-medium text-white/90 transition duration-300 hover:text-orange-400"
-                        >
-                            Contact
-                        </Link>
-
-                    </nav>
-
-                    {/* Button */}
-                    <button className="
-      relative
-      z-10
-      rounded-2xl
-      border
-      border-orange-400/30
-      bg-orange-500/90
-      px-8
-      py-4
-      text-lg
-      font-semibold
-      text-white
-      backdrop-blur-lg
-      transition-all
-      duration-300
-      hover:scale-105
-      hover:bg-orange-500
-      hover:shadow-[0_10px_30px_rgba(255,115,0,0.45)]
-    ">
-                        Source a Product →
-                    </button>
-
+              <div className="group relative cursor-pointer">
+                <div className="flex items-center gap-1 hover:text-[#0d1b3d]">
+                  Sell Products
+                  <ChevronDown size={16} />
                 </div>
-            </header>
-        </>
-    );
+              </div>
+
+              <Link
+                to="#"
+                className="hover:text-[#0d1b3d]"
+              >
+                Product Sourcing
+              </Link>
+
+              <Link to="#" className="hover:text-[#0d1b3d]">
+                Enquiry
+              </Link>
+
+              <Link to="#" className="hover:text-[#0d1b3d]">
+                About Us
+              </Link>
+
+              <Link to="support" className="hover:text-[#0d1b3d]">
+                Contact Us
+              </Link>
+            </nav>
+
+            {/* BUTTON */}
+            <button className="hidden lg:flex items-center gap-2 bg-[#0d1b3d] hover:bg-[#13295c] text-white px-5 py-3 rounded-md shadow-md transition">
+              <Search size={18} />
+              <span>Source a Product</span>
+            </button>
+
+            {/* MOBILE MENU ICON */}
+            <button className="lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-7 h-7 text-[#0d1b3d]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }

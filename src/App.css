@@ -1,0 +1,106 @@
+@keyframes floatWave {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, 30px) scale(1.1);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes floatWave2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -20px) scale(1.15);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes floatWave3 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(20px, -40px) scale(1.08);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+* {
+  cursor: none;
+}
+
+/* Main Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(96, 165, 250, 0.5);
+
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background 0.3s ease,
+    border 0.3s ease;
+}
+
+/* Small Dot */
+.cursor-dot {
+  position: fixed;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #2563eb
+  );
+
+  box-shadow:
+    0 0 15px rgba(96, 165, 250, 0.9),
+    0 0 35px rgba(37, 99, 235, 0.5);
+}
+
+/* Hover State */
+.cursor-hover {
+  width: 75px;
+  height: 75px;
+
+  background: rgba(96, 165, 250, 0.08);
+
+  border: 1px solid rgba(96, 165, 250, 0.9);
+
+  box-shadow:
+    0 0 45px rgba(96, 165, 250, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
