@@ -1,6 +1,6 @@
 import React from "react";
 import video1 from "../assets/videos/support-video.mp4";
-import supportimg from "../assets/images/support-img.jpg";
+import supportimg from "../assets/Images/support-img.jpg";
 
 export default function Support() {
   return (
